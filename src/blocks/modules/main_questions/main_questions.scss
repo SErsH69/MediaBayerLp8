@@ -1,0 +1,138 @@
+.main_questions {
+    padding-top: vw(32);
+    padding-bottom: vw(64);
+    @media all and (max-width: 1023px) {
+        padding-top: 32px;
+        padding-bottom: 48px;
+    }
+    &__title {
+        color: var(--Black, #0C091D);
+        font-family: 'neuropol x rg', sans-serif, cursive;
+        font-size: vw(40);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 120%;
+        margin-bottom: vw(32);
+        @media all and (max-width: 1023px) {
+            margin-bottom: 24px;
+            font-size: 24px;
+        }
+    }
+    &__items {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+        @media all and (max-width: 1023px) {
+            flex-direction: column;
+        }
+    }
+    &__l-side {
+        width: calc(50% - vw(8));
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+    &__block {
+        cursor: pointer;
+        border-radius: 8px;
+        overflow: hidden;
+        border: 1px solid var(--Light-gray-2, #E1E1E1);
+        background: var(--light-grey, #F6F7F9);
+        &:not(:last-child) {
+            margin-bottom: vw(16);
+            @media all and (max-width: 1023px) {
+                margin-bottom: 16px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            margin-bottom: 16px;
+        }
+        &.isActive {
+            padding-left: 0;
+            &:before {
+                transform: rotate(180deg);
+            }
+            .main_questions__answer {
+                display: block;
+            }
+            .main_questions__question {
+                background: var(--Green, #1AD079);
+                color: #fff;
+                &:before {
+                    transform: rotate(180deg);
+                    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M5.43957 11.9333L14.1329 20.6266C15.1596 21.6533 16.8396 21.6533 17.8662 20.6266L26.5596 11.9333' stroke='%23ffffff' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+                }
+            }
+        }
+    }
+    &__question {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(24);
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%;
+        position: relative;
+        padding: vw(24) vw(16);
+        padding-right: vw(50);
+        @media all and (max-width: 1023px) {
+            font-size: 16px;
+            padding: 16px;
+            padding-right: 35px;
+        }
+        &:before {
+            content: '';
+            position: absolute;
+            right: vw(16);
+            top: 50%;
+            width: vw(32);
+            height: vw(33);
+            margin-top: vw(-16);
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32' height='32' viewBox='0 0 32 32' fill='none'%3E%3Cpath d='M5.43957 11.9333L14.1329 20.6266C15.1596 21.6533 16.8396 21.6533 17.8662 20.6266L26.5596 11.9333' stroke='%23313132' stroke-width='2' stroke-miterlimit='10' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") 50% / 100% no-repeat;
+            @media all and (max-width: 1023px) {
+                width: 24px;
+                height: 24px;
+                margin-top: -12px;
+                right: 16px;
+            }
+        }
+    }
+    &__answer {
+        color: var(--Black, #313132);
+        font-family: 'Gilroy', sans-serif, cursive;
+        font-size: vw(16);
+        font-style: normal;
+        font-weight: 400;
+        line-height: 140%;
+        padding: vw(24) vw(16);
+        display: none;
+        * {
+            font-family: 'Gilroy', sans-serif, cursive;
+            font-size: vw(16);
+            font-style: normal;
+            font-weight: 400;
+            line-height: 160%;
+            @media all and (max-width: 1023px) {
+                font-size: 16px;
+            }
+        }
+        @media all and (max-width: 1023px) {
+            padding: 24px 16px;
+            font-size: 16px;
+        }
+        p {
+            &:first-child {
+                margin-top: 0;
+            }
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+    &__r-side {
+        width: calc(50% - vw(8));
+        @media all and (max-width: 1023px) {
+            width: 100%;
+        }
+    }
+}
